@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     const taskForm = document.getElementById('task-form');
     if(taskForm){
+        console.log("taskForm");
         taskForm.addEventListener('submit', function(e){
             e.preventDefault();
             console.log("pressed");
@@ -45,5 +46,41 @@ document.addEventListener('DOMContentLoaded', function(){
 
             taskForm.reset();
         })
+    }
+
+    const calculator = document.getElementById('calculator');
+    if(calculator){
+        console.log("calculator");
+
+        let currentExpression = '';
+
+        const calcNumberBtn = document.getElementsByClassName('calcNumber');
+        for(let i = 0; i < calcNumberBtn.length; i++) {
+            calcNumberBtn[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log(calcNumberBtn[i].innerHTML);
+                currentExpression += calcNumberBtn[i].innerHTML;
+                document.getElementById('calcResult').value = currentExpression;
+            })
+        }
+
+        const calcEqualBtn = document.getElementById('calcEqual');
+        calcEqualBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            try{
+                currentExpression = eval(currentExpression.replace('÷', '/').replace('x', '*'));
+                document.getElementById('calcResult').value = currentExpression;
+            } catch{
+                document.getElementById('calcResult').value = 'Error';
+            }
+        })
+
+        const calcClearBtn = document.getElementById('calcClear');
+        calcClearBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            currentExpression = '';
+            document.getElementById('calcResult').value = currentExpression;
+        })
+
     }
 })

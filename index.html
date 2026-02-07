@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+<div class="container-todo">
     <h1>To-do list</h1>
     <form id="task-form">
         <input type="text" id="taskInput" placeholder="Enter a task">
         <button type="submit" id="submitButton">Add Task</button>
     </form>
     <ul id="taskList"></ul> 
+</div>
+
+<div class="container-calc" id="calculator">
+    <h1>Calculator</h1>
+    <form id="calcForm">
+    <input type="text" id="calcResult" disabled>
+    <div class="calc-buttons">
+        <button class="calcNumber">7</button>
+        <button class="calcNumber">8</button>
+        <button class="calcNumber">9</button>
+        <button class="calcNumber">4</button>
+        <button class="calcNumber">5</button>
+        <button class="calcNumber">6</button>
+        <button class="calcNumber">1</button>
+        <button class="calcNumber">2</button>
+        <button class="calcNumber">3</button>
+
+        <button class="calcNumber">+</button>
+        <button class="calcNumber">-</button>
+        <button class="calcNumber">x</button>
+        <button class="calcNumber">÷</button>
+
+        <button id="calcEqual">=</button>
+
+        <button id="calcClear">C</button>
+    </div>
+    </form>
 </div>
 
 <script src="script.js"></script>

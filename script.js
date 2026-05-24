@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             const completeButton = document.createElement('button');
             completeButton.className = 'complete-btn';
-            completeButton.textContent = `V`;
+            completeButton.textContent = `✓`;
             completeButton.addEventListener('click', () => {
                 console.log("complete");
                 listItem.classList.toggle('completed');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             const removeButton = document.createElement('button');
             removeButton.className = 'remove-btn';
-            removeButton.textContent = `Remove`;
+            removeButton.textContent = `X`;
             removeButton.addEventListener('click', () => {
                 console.log("removed");
                 taskList.removeChild(listItem);

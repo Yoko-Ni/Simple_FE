@@ -2,27 +2,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 html, body {
-    background-color: aquamarine;
+    background-color: #F2EDC2;
     display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .container-todo {
     width: 500px;
     height: 500px;
-    margin: auto;
     padding: 20px;
-    background-color: floralwhite;
-    border: 4px inset gray;
+    margin: 10px;
+    background-color: #9FCB98;
+    border: 4px inset #346739;
     display: flex;
     flex-direction: column;
     align-items: center;
     
+}
+
+.container-todo button{
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.container-todo input{
+    padding: 15px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#submitButton:hover{
+    background-color: lightgray;
 }
 
 #taskList{
@@ -30,19 +45,15 @@ html, body {
     padding: 0;
 }
 
-#submitButton{
-    cursor: pointer;
-}
-
 .task{
-    background-color: lightgray;
+    background-color: #79AE6F;
     color: black;
     padding: 3px;
-    border-bottom: 3px dashed darkgray;
+    border-bottom: 3px dashed #346739;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 300px;
+    width: 400px;
 
 }
 
@@ -51,12 +62,10 @@ html, body {
 }
 
 .completed p{
-    color: gray;
     text-decoration: line-through;
 }
 
 .complete-btn{
-    cursor: pointer;
     background-color: green;
     color: white;
     padding: 2px;
@@ -69,8 +78,8 @@ html, body {
 
 .remove-btn{
     order: 3;
-    background-color: red;
-    cursor: pointer;
+    background-color: #C44545;
+    color: white;
 }
 
 .remove-btn:hover{
@@ -82,7 +91,9 @@ html, body {
 .container-calc {
     width: 350px;
     padding: 25px;
-    background-color: floralwhite;
+    background-color: #9FCB98;
+    border: 4px inset #346739;
+    margin: 10px;
 }
 
 .container-calc input{
@@ -93,17 +104,20 @@ html, body {
     border: none;
     margin-bottom: 20px;
     font-weight: bold;
+    background-color: white;
 }
+
 
 .calc-buttons{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
-
 .calc-buttons button{
     font-size: 1.6rem;
     padding: 15px;
     cursor: pointer;
-
+}
+.calc-buttons button:hover{
+    background-color: lightgray;
 }
